@@ -1,0 +1,25 @@
+.screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  background-color: black;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.link {
+  color: white;
+  font-size: 18px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
