@@ -4,7 +4,7 @@ import styles from '../styles/home.module.scss';
 export default async function Home() {
   return (
     <div className={styles.screen}>
-      <div>
+      <div className="container">
         <div>
           <h1 className={styles.title}>Hi, my name is Rostyk!</h1>
         </div>

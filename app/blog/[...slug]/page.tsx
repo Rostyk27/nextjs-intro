@@ -1,3 +1,3 @@
-export default function BlogPost() {
-  return <div>Post</div>;
+export default async function Post() {
+  return <div className="container">Post</div>;
 }
