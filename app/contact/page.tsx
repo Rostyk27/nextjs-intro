@@ -1,11 +1,37 @@
-import Link from 'next/link';
+'use client';
 
-export default async function Contact() {
+import { FormEvent, useState } from 'react';
+
+export default function Contact() {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+
+    await fetch('/api/contact', {
+      method: 'POST',
+      body: JSON.stringify({ email }),
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+    });
+
+    console.log('hey');
+  };
+
   return (
     <div className="container">
-      <h1>Contact page</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="email"
+          required
+          value={email}
+          onChange={e => setEmail(e.target.value)}
+        />
 
-      <Link href="/">Home</Link>
+        <button type="submit">Submit</button>
+      </form>
     </div>
   );
 }
