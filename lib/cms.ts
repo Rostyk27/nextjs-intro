@@ -7,7 +7,7 @@ const delay = (time: number) => {
 };
 
 export const getAllPosts = async () => {
-  await delay(2000);
+  await delay(1000);
 
   return Array.from({ length: 10 }).map((_, i) => {
     return {
